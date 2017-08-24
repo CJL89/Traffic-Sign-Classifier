@@ -65,13 +65,13 @@ As a first step, I decided to grayscale the images since it has been discovered 
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+https://github.com/CJL89/Traffic-Sign-Classifier/blob/master/traffic_sing_before_normalization.png
 
 As a last step, I decided to normalize each individual picture using the formula: image / 255.0 - 0.5 which brings the value of the image between -0.5 to 0.5 which helps bringing the data to a mean zero and equal variance.
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+https://github.com/CJL89/Traffic-Sign-Classifier/blob/master/traffic_sign_after_grayscaling.png
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
@@ -94,9 +94,8 @@ My final model consisted of the following layers:
 | RELU                  |                                               |
 | Dropout               |												|
 | Fully connected		| shape (84, 43)                                |
-| RELU                  |                                               |
-| Dropout               |												|
- 
+| Matmul                |                                               |
+|                       |												|
 
 
 ####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
@@ -106,6 +105,9 @@ My parameters are:
 rate = 0.001
 epochs = 10
 batch_size = 128
+mean = 0
+stddev = 0.1
+keep_prob = 0.5
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
