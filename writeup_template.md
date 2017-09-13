@@ -164,15 +164,15 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Bycicles      		| Stop sign   									| 
-| Bumpy Road  			| U-turn 										|
-| Double Curve			| Yield											|
+| Bycicles      		| Beware of ice/snow 							| 
+| Bumpy Road  			| Dangerous curve to the right                  |
+| Double Curve			| Children crossing								|
 | Right Lane Ends  		| Bumpy Road					 				|
 | Stop                  | Slippery Road      							|
-| Straight Ahea         | Slippery Road      							|
+| Straight Ahead        | Slippery Road      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The pictures that I chose from the web are normal visual pictures from the European set that do not contain any wording; therefore, I do not think the model should have any problems predicting the different images. Some of the images are a little off centered but the general visual of the pictures are the same. Also, I did reshape the pictures to a 32X32 size manually to cut down on the memory. Every single picture is in color and eventually before being tested is actually grayscaled and normalized.
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
